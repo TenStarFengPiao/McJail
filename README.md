@@ -1,10 +1,16 @@
 # McJail · 麦当牢
 
+![McJail Logo — an open book and a smiling chat bubble](assets/mcjail-logo.png)
+
 An AI-powered campus assistant for QQ.
 
 McJail helps students find school policies, understand notices, and get the documents they need. It combines knowledge retrieval, original document delivery, scheduled notifications, and admin-reviewed group message forwarding to make campus information easier to access and share.
 
 麦当牢是面向校园场景的 QQ 智能助手，支持知识问答、原件与模板交付、管理员通知及群消息审批转发，也提供 CLI 和知识文档管理后台。
+
+从“这条规定是什么意思”到“把原文件发给我”，McJail 将政策查询、资料获取与通知管理放到同一个 QQ 对话入口。学生通过私聊获取帮助，管理员通过预览与明确确认管理通知和群消息发布。
+
+Logo 将打开的书与聊天气泡结合：书页代表知识与文档，笑脸代表友好的对话体验，左侧三道竖线呼应“牢”的名字。详见 [项目介绍与 Logo 设计](docs/INTRODUCTION.md)。
 
 ## Features / 主要功能
 
