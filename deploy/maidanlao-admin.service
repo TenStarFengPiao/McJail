@@ -1,0 +1,24 @@
+[Unit]
+Description=Maidanlao Admin Dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory={remote_dir}
+EnvironmentFile={env_file}
+ExecStart={remote_dir}/.venv/bin/python -m maidanlao.cli run-admin --host 127.0.0.1 --port 8787
+Restart=always
+RestartSec=5
+User=maidanlao
+Group=maidanlao
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths={data_dir}
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

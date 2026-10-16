@@ -1,0 +1,24 @@
+[Unit]
+Description=Maidanlao NapCat OneBot Client
+After=network-online.target docker.service
+Wants=network-online.target docker.service
+
+[Service]
+Type=simple
+WorkingDirectory={remote_dir}
+EnvironmentFile={env_file}
+ExecStart={remote_dir}/.venv/bin/python -m maidanlao.cli run-bot
+Restart=always
+RestartSec=5
+User=maidanlao
+Group=maidanlao
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths={data_dir} {remote_dir}
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
